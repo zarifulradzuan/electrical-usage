@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Calculate
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <form id="calculate-form1">
+    <ion-item id="calculate-input2">
+      <ion-label stacked>
+        Previous Month(kwH)
+      </ion-label>
+      <ion-input [(ngModel)]="kwhPrev" type="number" placeholder="Enter previous month's usage" name="kwhPrev"></ion-input>
+    </ion-item>
+    <ion-item id="calculate-input3">
+      <ion-label stacked>
+        Current Month(kwH)
+      </ion-label>
+      <ion-input [(ngModel)]="kwhCurr" type="number" placeholder="Enter current month's usage" name="kwhCurr"></ion-input>
+    </ion-item>
+    <ion-item id="calculate-input4">
+      <ion-label>
+        First 200kWh Usage Rate:
+      </ion-label>
+      <ion-input [(ngModel)]="kwhFirst" type="number" placeholder="" name="kwhFirst"></ion-input>
+    </ion-item>
+    <ion-item id="calculate-input5">
+      <ion-label>
+        After 200kWh Usage Rate:
+      </ion-label>
+      <ion-input [(ngModel)]="kwhAfter" type="number" placeholder="" name="kwhAfter"></ion-input>
+    </ion-item>
+    <button id="calculate-button1" (click)="calculate()" ion-button color="positive" block>
+      Calculate
+    </button>
+    <ion-item id="calculate-input6">
+      <ion-label>
+        RM:
+      </ion-label>
+      <ion-input [(ngModel)]="kwhTotal" type="text" placeholder="" name="kwhTotal"></ion-input>
+    </ion-item>
+  </form>
+</ion-content>

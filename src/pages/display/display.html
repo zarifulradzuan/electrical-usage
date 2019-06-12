@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Display
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <ion-list id="display-list4">
+	<ion-item>
+		<b>Usages</b>
+	</ion-item>
+    <ion-item *ngFor="let usage of usages; let i = index" color="none" id="display-list-item10">
+      Usage of previous month: {{usage.kwhPrev}} kWh<br>
+	  Usage when taken: {{usage.kwhCurr}} kWh<br>
+	  First 200kWh: RM {{usage.kwhFirst}} <br>
+	  After: RM {{usage.kwhAfter}} <br>
+	  Total: RM {{usage.kwhTotal}}
+    </ion-item>
+  </ion-list>
+</ion-content>
